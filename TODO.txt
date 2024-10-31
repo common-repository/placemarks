@@ -1,0 +1,92 @@
+Need to do:
+- Include accessmap interface as shortcode option
+- Simple map to use marker-layer object
+- Include overlays in shortcode maps
+- Pull image if linked to a post on same blog?
+- Settings: Allow option to set default gps lat lng and zoom for admin map
+- Settings: Set attribution
+- Update'features shortcode' (currenly requires foundation for the layout)
+
+Wishlist:
+- All placemarks:  Sort locations into individual columns (link to just those like a real taxonomy)
+- Group placemarks when zoomed out?
+- Link selector (replace URL text field)
+
+Done:
+= 3.02 = 
+* Disabled error reporting display
+* Updated calls to API using rest_url() - to work with non-standard WordPress installs
+
+= 3.01 =
+* Multiple maps on a single page without conflict
+
+= 3.00 =
+* Reformat code using the WP Boilerplate format
+* Switched from Google Maps to OpenStreetMaps
+* New network settings available in multisite
+* Uses the WordPress REST API (discontinue old api)
+* Fixed xss vulnerability in old api (by removing it :)
+* Admin data pulled direclty from api
+
+= 2.1.0 =
+* Remove/hide preview button
+* Remove "view" message on update
+* Shortcode: allow "ids" to only show 1 or 2
+* Update icon on map from default
+* Add slug to location
+* Rename script/style files to make sence
+* Create data export page
+* Limit by location slug in shortcode
+
+= 2.0.3 =
+- Basic functions in place
+- All placemarks: Show location names instead of slugs 
+- Embedded map: Add "edit" link to markers displayed on map when user is logged in for quick editing!
+
+= 2.0.2 =
+* Bugfix: Only enqueue js on placemark admin pages
+* Settings: Allow locations in locations (via JSON)
+
+= 2.0.1 =
+* Bug fix: 2.0.0 was missing function files
+* Shortcode: set defaults for gps and zoom
+
+= 2.0.0 =
+* Feature: Setting can now be changed at the network level
+* Feature: Basic API for pulling data: /placemarks-data/
+
+= 1.1.0 =
+* Bug fix: Lots of bug fixes
+* Update: Marker types should now include slug. Allows you to change the name without breaking everything. Will work fine without slug for now. 
+* Update: All placemarks list view updated. 
+* Feature: Icon on map updates as you change type. 
+* Feature: Allow for overlay images in Locations JSON!
+* Feature: Data page /placemarks-data/ to act as api for external maps
+
+= 1.0.3 =
+* Bug fix: Only set up map if map_canvas is found on page
+
+= 1.0.2 =
+* Bug fix: Fixed comment error on pages with shortcode
+
+= 1.0.1 =
+* Bug fix: Only enqueue js on placemark admin pages
+* Bug fix: Fix error on pages with comments
+* Feature: Add edit link to each placemark on map
+
+= 1.0.0 =
+* First version to be released. 
+
+== Upgrade Notice ==
+
+= 1.0.3 =
+* Bug fix
+
+= 1.0.2 =
+* Bug fix
+
+= 1.0.1 =
+* Bug fixes. New edit links on map.
+
+= 1.0.0 =
+Seems stable enough, but only has basic features. 

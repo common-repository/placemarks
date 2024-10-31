@@ -1,0 +1,342 @@
+/*-----------------
+ * Styles for placemarks 
+ * -------------------------*/
+
+.placemarks{
+	border: 1px solid #ccc;
+	overflow-y: hidden;
+	margin-left: 0;
+	margin-right: 0;
+    z-index: 1;
+    position: relative;
+}
+
+.placemarks .pm-map{
+	border: 1px solid #ccc;
+	overflow-y: hidden;
+	margin: 0;
+}
+.placemarks .pm-map img{
+	border: 0 !important;
+}
+.placemarks.align-right{
+    float: right;
+    margin: 1.25em 0 .625em .9375em;
+    width: 50%;
+    display: inherit;
+}
+.placemarks.align-left{
+    float: left;
+    margin: 1.25em .9375em .625em 0;
+    width: 50%;
+}
+.placemarks.align-center{
+    margin: 1.25em auto .625em auto;
+    width: 100%;
+}
+
+/*-----------------
+ * Styles for placemarks template="simple"
+ * -------------------------*/
+
+/*-----------------
+ * Styles for placemarks template="features"
+ * -------------------------*/
+.placemarks.pm-features #pm-buttons-floor {
+	position: absolute;
+    z-index: 800; /* match other controls */
+	left: 10px;
+	top: 100px;
+	width: 35px;
+    display: block;
+    border:2px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.placemarks.pm-features #pm-buttons-floor:empty {
+    border: 0;
+}
+.placemarks.pm-features div#pm-buttons-floor button{
+    color:#000;
+    background: #fff;
+    margin:0;
+    height: 30px;
+    width: 35px;
+    border-bottom:1px solid rgba(0,0,0,0.2);
+    margin-left: -2px;
+    padding: 0 !important;
+}
+.placemarks.pm-features #pm-buttons-floor button:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.placemarks.pm-features #pm-buttons-floor button:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom: 0;
+}
+
+.placemarks.pm-features button#icons-off{
+    z-index: 800;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+    display: block;
+    color:#000;
+    background: #fff;
+    margin:0;
+    height: 30px;
+    border:2px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 12px;
+    font-size: 12px;
+}
+
+
+
+
+
+
+#map-column{
+	padding:0;
+}
+.campus-labels, .district-label {
+	visibility: hidden;
+}
+div.location-controls {
+    padding:5px 0 !important;
+	margin-top:0 !important;
+}
+div.location-controls label {
+	font-size: 1em;
+	color: #fff;
+	margin-top:5px;
+}
+
+div.location-controls select {
+	margin-bottom: 0 !important; /* the buttons won't wrap proper without this */ 	
+}
+div.location-controls select:focus {
+	outline-style: auto !important; /* needed to show keyboard focus in chrome */ 
+	outline-width: 1px;
+}
+
+#control-bar{
+	z-index:1000;
+	/*height: 690px;*/
+	padding:0;
+    box-shadow:0 0 20px rgba(0, 0, 0, 0.3) !important;
+}
+#control-bar #pm_shadow_bottom{
+    display:none; /* changed by the js */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    box-shadow: inset 0 -20px 20px -20px rgba(0, 0, 0, 0.3) !important;
+}
+#location-controls-box{
+    height:auto !important;
+    padding:10px 15px 8px 15px;
+	background-color: #546373;
+	color: #fff;
+}
+
+/*----campus optgroups (added dynamically)----*/
+#pm-select-campus option {
+	padding-left:5px;
+	color:#000;
+	font-style:normal;
+}
+select#pm-select-campus optgroup {
+	color:#999;
+	font-weight: normal;
+}
+select#pm-select-campus optgroup:before {
+	font-style:italic;
+	color:#999;
+	font-weight: normal;
+	border-bottom: 1px solid #bbb;
+	margin:3px 0 2px 0;
+	padding-left: 4px;
+}
+.location-controls option.not-here{
+	color: #bbb !important;
+}
+
+
+/* ----- legend styles ----- */
+
+div#legend{
+	/*height:515px;*/
+    
+	margin-left: 10px;
+	margin-right: 10px;
+    overflow-x:hidden !important;
+    overflow-y:scroll !important; /* only scroll vertically */
+    padding-right:15px; /* make room for the scrollbar */
+}
+div#legend h4 {
+	margin-top: 0em;
+	font-size: 1.3em;
+}
+div#legend #building-info {
+	font-style: italic;
+	color:#595959;
+	font-size:.9em;
+}
+div#legend img.placemarks-bubble-image {
+	display:none; /* dont show thumbnail here */
+}
+div#legend ul{
+    margin-left: 0;	
+    margin-bottom: 15px;
+ 	padding-left:10px;
+}
+div#legend li {
+	padding:0 10px 6px 25px;
+	font-size: 13px;
+	list-style-type: none;
+	margin: 18px 0 0 0;
+	position: relative;
+	background: #F3F3F3;
+	cursor: pointer;
+	border: 1px solid transparent;
+}
+div#legend li:hover, div#legend li:focus, div#legend li.selected {
+	background:#c9c9c9 !important;
+    border-color:rgba(0, 0, 0, 0.5) !important;
+	outline: none;
+}
+
+div#legend li.no-features {
+	padding-top: 6px;
+	cursor: default;
+    background: #F3F3F3 !important; /* not really selectable */
+}
+div#legend li.no-features::before{
+	content: url(../images/no-features.png);
+    position: absolute;
+	left: -10px;
+	top: -8px;
+	border: none;
+}
+div#legend li.no-icon:hover, div#legend li.no-icon:focus {
+	border-color: transparent;
+}
+div#legend li img {
+	/*positioning like this so that long descriptions will not wrap under icon and look hamajang*/
+	position: absolute;
+	left: -10px;
+	top:-12px !important;
+	border: none;
+}
+div#legend li li{
+	padding-left:0;
+	margin: 1em;
+	border: 0 !important;
+	list-style-type: disc;
+}
+div#legend h5 {
+	margin: 0 0 2px 0;
+	padding-top: 5px;
+	font-size:1.2em;
+}
+h4.window {
+	margin-top: 0;
+}
+/* feedback announcement */
+#note {
+	background-color: #E9E5DC;
+	padding: 0px 30px 10px 30px;
+	border-radius: 30px;
+	margin-bottom: 13px;
+}
+#note i {
+	float: none;
+	font-size: 225%;
+	color: #000;
+	text-shadow: none;
+	margin: 0;
+	padding: 0 12px 0 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	position: relative;
+	top: 4px;
+}
+#go-to {
+	width: 4em;
+	height: 1.75em;
+	margin-top: 2.7em;
+}
+div#legend li.loading {
+	padding-top: 5px;
+	height: 3em;
+	text-align: center;
+	background-color: transparent;
+	background-image: url(https://www.pcc.edu/about/locations/map/images/wait-for-it.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+@media print {
+	nav#breadcrumbs,
+	button#icons-off,  
+	div.info,
+	div.location-controls label,
+	div#placemarks	 {
+		display: none !important;
+	}
+	
+	header#secondary-header,
+	header#secondary-header h2 {
+			padding: 0 !important;
+			margin: 0 !important;	
+	}
+	div.location-controls select {
+		width: auto !important;
+	}
+	div#placemarks {
+		min-height: 0 !important;
+	}
+	div#placemarks p {
+		color: #333 !important;
+	}
+	img {
+		border: none !important;
+	}
+	div#map {
+		display: block !important;
+		page-break-inside: avoid;
+		/*height: 100% !important;*/
+		/*margin-top: -.5in !important;*/
+	}
+	div.window {
+		background-color: #fff !important;
+		padding: 5pt !important;	
+		padding-bottom: 10pt !important;
+		border-bottom: 2px #C6BBCC solid;
+		margin-bottom: 0 !important;
+        width:210px !important; /* so the content inside the modals when you choose something doesn't scroll */
+	}
+	div.window h4 {
+	    font-size: 12pt !important;
+		font-weight: bold !important; 
+	}	 
+ 
+	#legend h4 {
+		margin-top: 20px !important;
+		font-size: 18pt !important;
+		font-weight: bold !important;	
+	}
+	#legend ul {
+		margin-left: 40px !important;
+		page-break-inside: avoid;	
+	}
+	div#legend li img {
+		top: 5px;
+	}
+ 	
+}

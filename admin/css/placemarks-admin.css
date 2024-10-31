@@ -1,0 +1,35 @@
+/* Only used on Admin */
+
+#pm-map{
+    clear: both;
+    height: 250px;
+}
+.leaflet-grab{
+    cursor: crosshair !important;
+}
+#pm-metabox-place label, #pm-metabox-mark label{
+    width:150px; 
+    display:block; 
+    float:left; 
+    clear:left;
+}
+#pm-metabox-place textarea{
+    width:50%; 
+}
+#pm-metabox-mark textarea, #pm-metabox-mark input{
+    width:50%; 
+}
+#pm-metabox-place .instructions, #pm-metabox-mark .instructions{
+    margin:-15px 0 0 150px; 
+    font-style:italic;  
+    color:#777;
+}
+
+/* icons */
+#placemark-marker-image{
+		display:inline-block;
+		width:auto;
+		height:37px;
+		overflow:visible;
+		margin:-12px 5px;
+		}
